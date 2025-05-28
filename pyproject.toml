@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gkvfigpdf"
+version = "0.1.0"
+description = "A Python package for generating PDF of GKV standard ASCII output"
+authors = [
+    { name = "Shinya Maeyama", email = "maeyama.shinya@nifs.ac.jp" }
+]
+readme = "README.md"
+license = {text = "MIT License"}
+requires-python = ">=3.7"
+
+dependencies = [
+    "numpy>=1.24",
+    "matplotlib>=3.8",
+    "pandas>=2.2",
+    "reportlab>=4.0",
+    "pypdf>=4.3",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

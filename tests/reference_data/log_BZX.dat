@@ -1,0 +1,16 @@
+C++/Python booz_xform development version
+# nfp_b, ns_b, aspect_b, rmax_b, rmin_b, betaxis_b = 
+5 5 10.967699223609666 0.0 0.0 0.0
+# mboz_b, nboz_b, mnboz_b, jsize, lasym_b = 
+18 7 263 4 False
+# fname_tag = 
+# nrho, ntheta, nzeta = 
+5 12 4
+ *** up-down symmetric configuration *** 
+data point in wout found.
+B0_p, Aminor_p, Rmajor_p, volume_p = 
+-2.179007830483286 0.5048622243766762 5.53717702632592 27.858896009974732
+Bax, Rax, a (for GKV), Phi_edge =  2.218634507005608 5.7021160301751 0.4996395471863887 -0.2769296009798979
+rho_nu[0], rho_nu[1], iota_bar[0], iota_bar[1], = 
+-0.0 0.5 0.7597012684974265 0.750832223608564
+DONE!!
