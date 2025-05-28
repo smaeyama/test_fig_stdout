@@ -1,4 +1,4 @@
- &cmemo memo="GKV-plus f0.61 developed for pre-exa-scale computing", &end
+ &cmemo memo="GKV-plus f0.64 developed for pre-exa-scale computing", &end
  &calct calc_type="nonlinear",
         z_bound="outflow",
         z_filt="off",
@@ -11,11 +11,11 @@
  &equib equib_type = "analytic", &end
  &run_n inum=001,
         ch_res = .false., &end
- &files f_log="/data/lng/maeyama/gkvp/f0.63/benchmark/ITGae-nl/log/gkvp.",
-        f_hst="/data/lng/maeyama/gkvp/f0.63/benchmark/ITGae-nl/hst/gkvp.",
-        f_phi="/data/lng/maeyama/gkvp/f0.63/benchmark/ITGae-nl/phi/gkvp.",
-        f_fxv="/data/lng/maeyama/gkvp/f0.63/benchmark/ITGae-nl/fxv/gkvp.",
-        f_cnt="/data/lng/maeyama/gkvp/f0.63/benchmark/ITGae-nl/cnt/gkvp.", &end
+ &files f_log="/data/lng/maeyama/gkvp/f0.64/benchmark/ITGae-nl/log/gkvp.",
+        f_hst="/data/lng/maeyama/gkvp/f0.64/benchmark/ITGae-nl/hst/gkvp.",
+        f_phi="/data/lng/maeyama/gkvp/f0.64/benchmark/ITGae-nl/phi/gkvp.",
+        f_fxv="/data/lng/maeyama/gkvp/f0.64/benchmark/ITGae-nl/fxv/gkvp.",
+        f_cnt="/data/lng/maeyama/gkvp/f0.64/benchmark/ITGae-nl/cnt/gkvp.", &end
  &runlm e_limit = 3600.d0, &end
  &times tend = 200.d0,
         dtout_fxv = 10.d0,
@@ -71,14 +71,14 @@
           nss = 501,
           ntheta = 384,      
           nzeta  = 0,      &end
- &bozxf f_bozx="/data/lng/maeyama/gkvp/f0.63/benchmark/ITGae-nl/vmec/",  &end
+ &bozxf f_bozx="/data/lng/maeyama/gkvp/f0.64/benchmark/ITGae-nl/vmec/",  &end
 
  &igsp s_input = 0.5d0,
           mc_type = 0,
           q_type = 1,
           nss = 101,
           ntheta = 49,      &end
- &igsf f_igs="/data/lng/maeyama/gkvp/f0.63/benchmark/ITGae-nl/eqdsk/",  &end
+ &igsf f_igs="/data/lng/maeyama/gkvp/f0.64/benchmark/ITGae-nl/eqdsk/",  &end
 
  &nu_ref Nref = 4.5d19,
          Lref = 1.7d0,
