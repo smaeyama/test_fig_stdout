@@ -82,11 +82,20 @@ def plot_freq(global_ny: int, data_dir: Path, pdf_out: Path) -> None:
     ax.tick_params(labelsize=7, direction='in')
 
     # dsp.dat から k_y スペクトルを抽出します (k_x ≈ 0 の行)。
-    dsp = np.loadtxt(data_dir / 'dsp.dat')
-    ky_mask = np.abs(dsp[:, 0]) < 1e-10      # k_x ≈ 0
-    ky  = dsp[ky_mask, 1]                    # col2
-    freq = dsp[ky_mask, 2]                   # col3
-    grow = dsp[ky_mask, 3]                   # col4
+    try:
+        dsp = np.loadtxt(data_dir / 'dsp.dat')
+        if dsp.ndim == 1:
+            dsp = dsp.reshape(1,-1)
+        ky_mask = np.abs(dsp[:, 0]) < 1e-10      # k_x ≈ 0
+        ky  = dsp[ky_mask, 1]                    # col2
+        freq = dsp[ky_mask, 2]                   # col3
+        grow = dsp[ky_mask, 3]                   # col4
+    
+    except (OSError, ValueError, IndexError) as e:
+        print(f"[WARN] dsp.dat is not converged.")
+        ky = np.array([])
+        freq = np.array([])
+        grow = np.array([])
 
     # (1, 0): γ_l(k_y) 成長率スペクトルを描画します。
     ax = axes[1, 0]
